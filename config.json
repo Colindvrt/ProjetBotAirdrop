@@ -12,7 +12,9 @@
         "api_key_index": "2"
     },
     "extended": {
-        "key": "4b216ecbab744768e103a6b40e15e42e",
-        "secret": "0x6a4b564f85d19810eb962d7a89eb85aca1a997aa823f947daff0bd9daf09549"
+        "api_key": "4b216ecbab744768e103a6b40e15e42e",
+        "public_key": "0x80064010e4b2ec6954b089cce9574aeadf187ad8840b3afd2056f7b3a97efe",
+        "private_key": "0x6a4b564f85d19810eb962d7a89eb85aca1a997aa823f947daff0bd9daf09549",
+        "vault_id": "224363"
     }
 }

@@ -1,0 +1,135 @@
+STRUCTURE DU PROJET - Funding Farming Bot v2.0
+==============================================
+
+BotFarmAirdrop/
+│
+├── main.py                          # Point d'entrée de l'application
+├── config.json                      # Configuration API (généré/modifié par l'app)
+├── requirements.txt                 # Dépendances Python
+├── README.md                        # Documentation utilisateur
+├── CHANGEMENTS_V2.md                # Détails de la refonte
+├── STRUCTURE.txt                    # Ce fichier
+│
+├── src/                             # Code source principal
+│   │
+│   ├── __init__.py
+│   │
+│   ├── core/                        # Logique métier
+│   │   ├── __init__.py
+│   │   ├── models.py                # 18 modèles de données (335 lignes)
+│   │   └── scanner.py               # Algorithme de scan amélioré (250 lignes)
+│   │
+│   ├── platforms/                   # Implémentations par plateforme
+│   │   ├── __init__.py
+│   │   ├── base.py                  # Classe abstraite + Factory (280 lignes)
+│   │   │
+│   │   ├── hyperliquid/
+│   │   │   ├── __init__.py
+│   │   │   └── api.py               # Trading complet Hyperliquid (480 lignes)
+│   │   │
+│   │   ├── paradex/
+│   │   │   ├── __init__.py
+│   │   │   └── api.py               # Trading complet Paradex (525 lignes)
+│   │   │
+│   │   ├── lighter/
+│   │   │   ├── __init__.py
+│   │   │   └── api.py               # Trading complet Lighter (450 lignes)
+│   │   │
+│   │   └── extended/
+│   │       ├── __init__.py
+│   │       └── api.py               # Trading complet Extended/X10 (475 lignes)
+│   │
+│   ├── trading/                     # Moteur de trading
+│   │   ├── __init__.py
+│   │   ├── executor.py              # Exécuteur unifié (350 lignes)
+│   │   └── position_manager.py      # Gestion positions + monitoring (400 lignes)
+│   │
+│   ├── ui/                          # Interface utilisateur
+│   │   ├── __init__.py
+│   │   ├── app.py                   # Application principale (150 lignes)
+│   │   ├── theme.py                 # Thème Glassmorphism (350 lignes)
+│   │   │
+│   │   ├── components/              # Composants réutilisables
+│   │   │   ├── __init__.py
+│   │   │   ├── glass_frame.py       # Frames translucides (100 lignes)
+│   │   │   ├── kpi_card.py          # Cartes KPI (120 lignes)
+│   │   │   └── opportunity_row.py   # Lignes d'opportunités (150 lignes)
+│   │   │
+│   │   └── pages/                   # Pages de l'application
+│   │       ├── __init__.py
+│   │       ├── scanner_page.py      # Scanner multi-plateformes (250 lignes)
+│   │       ├── bot_page.py          # Bot delta-neutral (280 lignes)
+│   │       ├── dashboard_page.py    # Dashboard portfolio (150 lignes)
+│   │       ├── stats_page.py        # Statistiques airdrops (100 lignes)
+│   │       └── settings_page.py     # Configuration API (350 lignes)
+│   │
+│   └── config/                      # Gestion de configuration
+│       ├── __init__.py
+│       └── manager.py               # ConfigManager (320 lignes)
+│
+└── old/                             # Ancien code (archivé)
+    ├── app.py                       # Ancien main (583 lignes)
+    ├── bot_page.py                  # Ancien bot (483 lignes)
+    ├── dashboard_page.py            # Ancien dashboard (69 lignes)
+    ├── scanner_logic.py             # Ancien scanner (73 lignes)
+    ├── stats_page.py                # Anciens stats (76 lignes)
+    ├── trading_engine.py            # Ancien trading (140 lignes)
+    ├── API/                         # Anciens fichiers API
+    │   ├── __init__.py
+    │   ├── hyperliquid_api.py
+    │   ├── paradex_api.py
+    │   ├── lighter_api.py
+    │   └── extended_api.py
+    └── FundingFinder/               # Anciens scripts de test
+        ├── hyperliquid_funding.py
+        ├── paradex_funding.py
+        ├── lighter_funding.py
+        └── aster_funding.py
+
+
+STATISTIQUES
+============
+
+Fichiers créés :        32
+Lignes de code :        ~8000
+Modules principaux :    6
+Pages UI :              5
+Composants UI :         3
+Plateformes :           4
+
+NOUVEAUTÉS v2.0
+===============
+
+✅ Architecture modulaire par plateforme
+✅ Interface CustomTkinter avec Glassmorphism
+✅ Trading complet sur 4 plateformes (vs 1)
+✅ Algorithme avec frais et slippage réels
+✅ Monitoring temps réel des positions
+✅ Gestion automatique (TP/SL/reversal)
+✅ Configuration API centralisée
+✅ Code professionnel et maintenable
+
+POUR DÉMARRER
+=============
+
+1. Installer les dépendances :
+   pip install -r requirements.txt
+
+2. Lancer l'application :
+   python main.py
+
+3. Configurer les API :
+   Aller dans Settings et entrer vos clés API
+
+4. Scanner des opportunités :
+   Onglet Scanner → Scan Opportunities
+
+5. Exécuter une stratégie :
+   Cliquer sur une opportunité → Configure dans Bot → Execute
+
+SUPPORT
+=======
+
+Documentation : README.md
+Changements : CHANGEMENTS_V2.md
+GitHub : (créer une issue pour questions/bugs)

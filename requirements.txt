@@ -1,0 +1,24 @@
+# Funding Farming Bot v2.0 - Dependencies
+
+# UI Framework
+customtkinter>=5.2.0
+
+# Platform SDKs
+hyperliquid-python-sdk>=0.2.0
+eth-account>=0.11.0
+
+# Lighter SDK
+lighter>=0.0.5  # Latest available version (0.0.5)
+
+# X10 Starknet SDK
+x10-python-trading-starknet>=0.0.1  # Note: May need specific version or manual installation
+
+# Data processing
+pandas>=2.0.0
+numpy>=1.24.0
+
+# HTTP requests
+requests>=2.31.0
+
+# Utilities
+python-dateutil>=2.8.2
